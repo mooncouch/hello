@@ -1,1 +1,8 @@
 journal site/app
+
+Questions
+How to get multiple objects? CLASS.Objects.get() raises an error when it returns more than 1 object.
+
+How to add entries to the author class?
+
+How to remove an author?
