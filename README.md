@@ -1,5 +1,7 @@
 # hello
 first repository for collaboration
 
-growing developer
-going to be uploading python code in the next commit
+questions:
+What is a trunk? Is it branch?
+Trying to svn a directory and can't seem to. 
+
