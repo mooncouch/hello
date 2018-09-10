@@ -3,6 +3,12 @@ journal site/app
 I can not add an entry with a date. 
 This works with Question/Choice example
 
+Having issues adding the entry to author class:
+>>> me.entry_set.create(title="second entry", entry_date=string(current_year), instrument="AMD", setup="inside bar")
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'string' is not defined
+
 I got it working with STR() but what would be the equvalent bytes like ojbect of:
 current_year = timezone.now().year()
 
