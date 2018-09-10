@@ -5,6 +5,12 @@ This works with Question/Choice example
 
 How to get ids of all entries for an author?
 
+The following is an alterative to get id. 
+>>> c = me.entry_set.get(pk=1)
+>>> c
+<Entry: first entry (mooncouch)>
+
+
 I got it working with STR() but what would be the equvalent bytes like object of:
 current_year = timezone.now().year()
 
