@@ -5,6 +5,11 @@ How to get multiple objects? CLASS.Objects.get() raises an error when it returns
 How to add entries to the author class?
 How to remove an author?
 
+How to return all objects with Ids? The follow lines didn't work
+>>> Author.objects.filter(author='entry').values_list('id', flat=True)
+>>> Author.objects.filter(author='name').values_list('id', flat=True)
+
+
 I go to add an entry to the author class and get an error. What is wrong?
 >>> me.entry_set.all()
 <QuerySet []>
