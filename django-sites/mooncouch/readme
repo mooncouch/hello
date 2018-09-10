@@ -6,7 +6,7 @@ With CLASS.objects.all()
 How to add entries to the author class?
 with .save()
 How to remove an author?
-.remove()
+.delete()
 
 How to return all objects with Ids? The follow lines didn't work
 >>> Author.objects.filter(author='entry').values_list('id', flat=True)
