@@ -35,7 +35,7 @@ class Entry(models.Model):
     highest_price = models.IntegerField(default=0)
     lowest_price = models.IntegerField(default=0)
     notes = models.CharField(max_length=200, default='a')
-    #screenshots = models.FileField(upload_to='uploads/%Y/%m/%d/')
+    screenshots = models.FileField(null=True, blank=True, upload_to='uploads/%Y/%m/%d/')
     '''
     def was_published_recently(self):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
