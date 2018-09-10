@@ -3,6 +3,9 @@ journal site/app
 I can not add an entry with a date. 
 This works with Question/Choice example
 
+I got it working with STR() but what would be the equvalent bytes like ojbect of:
+current_year = timezone.now().year()
+
 >>> me.entry_set.create(title="second entry", entry_date=current_year, instrument="AMD", setup="inside bar")
 Traceback (most recent call last):
   File "<console>", line 1, in <module>
