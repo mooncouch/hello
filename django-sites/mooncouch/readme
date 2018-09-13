@@ -8,6 +8,8 @@ with .save()
 How to remove an author?
 .delete()
 
+Having issues getting the entry objects from the Author, how to?
+
 How to return all objects with Ids? The follow lines didn't work
 >>> Author.objects.filter(author='entry').values_list('id', flat=True)
 >>> Author.objects.filter(author='name').values_list('id', flat=True)
