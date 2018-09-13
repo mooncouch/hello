@@ -11,4 +11,6 @@ urlpatterns = [
     path('<int:author_id>/entry/', views.entry, name='entry'),
     # ex: /polls/5/vote/
     path('<int:author_id>/summary/', views.summary, name='summary'),
+    #how to make a view that populates based off of entry_id
 ]
+
