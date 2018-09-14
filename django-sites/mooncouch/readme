@@ -8,6 +8,10 @@ with .save()
 How to remove an author?
 .delete()
 
+Similair to the solved below, how do I get all the attributes of a class? I can not get the Entry attributes.
+How to get the attributes of an instance?
+In [72]: Mooncouch.Journal.models.Entry._meta.get_all_field_names()
+
 Having issues getting the entry objects from the Author, how to?
 
 Figured it out:
