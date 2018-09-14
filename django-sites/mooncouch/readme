@@ -1,13 +1,6 @@
 journal site/app
 
 Questions
-How to get multiple objects? CLASS.Objects.get() raises an error when it returns more than 1 object.
-With CLASS.objects.all()
-How to add entries to the author class?
-with .save()
-How to remove an author?
-.delete()
-
 Similair to the solved below, how do I get all the attributes of a class? I can not get the Entry attributes.
 How to get the attributes of an instance?
 
@@ -106,3 +99,11 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/base.py", line 495, in __init__
     raise TypeError("'%s' is an invalid keyword argument for this function" % kwarg)
 TypeError: 'entry_date' is an invalid keyword argument for this function
+
+Old Questions
+How to get multiple objects? CLASS.Objects.get() raises an error when it returns more than 1 object.
+With CLASS.objects.all()
+How to add entries to the author class?
+with .save()
+How to remove an author?
+.delete()
