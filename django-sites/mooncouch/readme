@@ -10,6 +10,29 @@ How to remove an author?
 
 Having issues getting the entry objects from the Author, how to?
 
+Figured it out:
+In [31]: me = Author.objects.get(pk=1)
+
+In [32]: me
+Out[32]: <Author: mooncouch (cottell.andrew@gmail.com)>
+
+In [33]: Entry.objects.get(id=1)
+Out[33]: <Entry: first entry (mooncouch)>
+
+In [34]: e = Entry.objects.get(id=1)
+
+In [35]: me
+Out[35]: <Author: mooncouch (cottell.andrew@gmail.com)>
+
+In [36]: e
+Out[36]: <Entry: first entry (mooncouch)>
+
+In [37]: e = me.entry_set.all()
+
+In [38]: e
+Out[38]: <QuerySet [<Entry: first entry (mooncouch)>, <Entry: second entry (mooncouch)>]>
+
+
 n [17]: Entry.objects.filter(author="mooncouch")
 ---------------------------------------------------------------------------
 ValueError                                Traceback (most recent call last)
