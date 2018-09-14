@@ -10,7 +10,22 @@ How to remove an author?
 
 Similair to the solved below, how do I get all the attributes of a class? I can not get the Entry attributes.
 How to get the attributes of an instance?
-In [72]: Mooncouch.Journal.models.Entry._meta.get_all_field_names()
+
+In [78]: e.objects.values_list()
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-78-15ffbd7002e1> in <module>()
+----> 1 e.objects.values_list()
+
+/anaconda3/lib/python3.6/site-packages/django/db/models/manager.py in __get__(self, instance, cls)
+    174     def __get__(self, instance, cls=None):
+    175         if instance is not None:
+--> 176             raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+    177
+    178         if cls._meta.abstract:
+
+AttributeError: Manager isn't accessible via Entry instances
+
 
 Having issues getting the entry objects from the Author, how to?
 
