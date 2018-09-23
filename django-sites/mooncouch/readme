@@ -36,6 +36,19 @@ me = Author.objects.filter(id=1)
 In [90]: me
 Out[90]: <QuerySet [<Author: mooncouch (cottell.andrew@gmail.com)>]>
 
+
+How to use the doc references correctly?
+#the following code creates an error and says 
+# ValueError: Cannot assign "<QuerySet [<Author: mooncouch (cottell.andrew@gmail.com)>]>": "Entry.author" must be a "Author" instance.
+In [96]: entry3 = Entry.objects.create(author=me, title='third')
+
+#tried variation - same error
+ entry3 = Entry.objects.create(author=Author.objects.filter(id=1), title
+    ...: ='third')
+
+#other doc try - same error
+ e3 = Entry(author=me, title='third')
+
 <QuerySet []>
 >>> me.entry_set.create(title="first entry", instrument="AMD", setup="inside bar")
 Traceback (most recent call last):
