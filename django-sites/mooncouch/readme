@@ -1,36 +1,21 @@
 journal site/app
 
 Questions
-Similair to the solved below, how do I get all the attributes of a class? I can not get the Entry attributes.
-How to get the attributes of an instance?
+How to loop through values of a dictionary value?
+#I assign an the first entry to entry1 with
+from journal.models import Author, Entry
+entry1 = Entry.objects.filter(id=1).values()
+#can not loop with
+for i in entry1.values():
+    print(i)
+#also tried - says error, returns too many values)
+for k, v in entry1.values():
+    print(k, v)
+#also tried - says error, returns too many values)
+for k, v in entry1.values():
+    print(k)
+    print(v)
 
-In [117]: Author.objects.filter(id=1).values()
-Out[117]: <QuerySet [{'id': 1, 'name': 'mooncouch', 'email': 'cottell.andrew@gmail.com'}]>
-
-In [118]: Entry.objects.filter(id=1).values()
-Out[118]: <QuerySet [{'id': 1, 'author_id': 1, 'title': 'first entry', 'entry_date': datetime.datetime(2018, 9, 10, 4, 11, 23, 833294, tzinfo=<UTC>), 'instrument': 'a', 'setup': 'a', 'quantity': 0, 'stop_loss': 0, 'take_profit': 0, 'expiration_date': datetime.datetime(2018, 9, 10, 4, 11, 23, 833328, tzinfo=<UTC>), 'strike': 0, 'premium': 0, 'theta': 0, 'delta': 0, 'vega': 0, 'exit_date': datetime.datetime(2018, 9, 10, 4, 11, 23, 833347, tzinfo=<UTC>), 'exit_price': 0, 'pl': 0, 'breakeven': 0, 'fees': 0, 'highest_price': 0, 'lowest_price': 0, 'notes': 'a', 'screenshots': ''}]>
-
-In [78]: e.objects.values_list()
----------------------------------------------------------------------------
-AttributeError                            Traceback (most recent call last)
-<ipython-input-78-15ffbd7002e1> in <module>()
-----> 1 e.objects.values_list()
-
-/anaconda3/lib/python3.6/site-packages/django/db/models/manager.py in __get__(self, instance, cls)
-    174     def __get__(self, instance, cls=None):
-    175         if instance is not None:
---> 176             raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
-    177
-    178         if cls._meta.abstract:
-
-AttributeError: Manager isn't accessible via Entry instances
-
-
-
-
-How to return all objects with Ids? The follow lines didn't work
->>> Author.objects.filter(author='entry').values_list('id', flat=True)
->>> Author.objects.filter(author='name').values_list('id', flat=True)
 
 
 I go to add an entry to the author class and get an error. What is wrong?
@@ -107,3 +92,11 @@ How to add entries to the author class?
 with .save()
 How to remove an author?
 .delete()
+How do I get all the attributes of a class? I can not get the Entry attributes.
+How to get the attributes of an instance?
+
+In [117]: Author.objects.filter(id=1).values()
+Out[117]: <QuerySet [{'id': 1, 'name': 'mooncouch', 'email': 'cottell.andrew@gmail.com'}]>
+
+In [118]: Entry.objects.filter(id=1).values()
+Out[118]: <QuerySet [{'id': 1, 'author_id': 1, 'title': 'first entry', 'entry_date': datetime.datetime(2018, 9, 10, 4, 11, 23, 833294, tzinfo=<UTC>), 'instrument': 'a', 'setup': 'a', 'quantity': 0, 'stop_loss': 0, 'take_profit': 0, 'expiration_date': datetime.datetime(2018, 9, 10, 4, 11, 23, 833328, tzinfo=<UTC>), 'strike': 0, 'premium': 0, 'theta': 0, 'delta': 0, 'vega': 0, 'exit_date': datetime.datetime(2018, 9, 10, 4, 11, 23, 833347, tzinfo=<UTC>), 'exit_price': 0, 'pl': 0, 'breakeven': 0, 'fees': 0, 'highest_price': 0, 'lowest_price': 0, 'notes': 'a', 'screenshots': ''}]>
