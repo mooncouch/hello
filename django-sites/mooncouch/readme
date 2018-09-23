@@ -16,6 +16,15 @@ for k, v in entry1.values():
     print(k)
     print(v)
 
+#code in template
+<h1>{{ entry.id }} {{entry.title}} </h1>
+<ul>
+{% for k, v in Entry.objects.filter(id=1).values() %}
+    <li>{{ k, v }}</li>
+{% endfor %}
+</ul>
+
+
 
 
 I go to add an entry to the author class and get an error. What is wrong?
