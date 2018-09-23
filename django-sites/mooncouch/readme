@@ -29,6 +29,13 @@ for k, v in entry1.values():
 
 I go to add an entry to the author class and get an error. What is wrong?
 >>> me.entry_set.all()
+
+
+#assign author object with:
+me = Author.objects.filter(id=1)
+In [90]: me
+Out[90]: <QuerySet [<Author: mooncouch (cottell.andrew@gmail.com)>]>
+
 <QuerySet []>
 >>> me.entry_set.create(title="first entry", instrument="AMD", setup="inside bar")
 Traceback (most recent call last):
